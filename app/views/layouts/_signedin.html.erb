@@ -1,0 +1,16 @@
+  <li class="nav-item">
+    <%= link_to 'Edit User',
+    edit_user_registration_path, class: "nav-link active"%>
+  </li>
+  <li class="nav-item">
+    <%= link_to 'Sign Out',
+    destroy_user_session_path, method: :delete, class: "nav-link active"%>
+  </li>
+  <li class="nav-item">
+    <%= link_to 'Tasks',
+    tasks_path, class: "nav-link active"%>
+  </li>
+  <li class="nav-item">
+    <%= link_to 'New Task',
+    new_task_path, class: "nav-link active"%>
+  </li>
