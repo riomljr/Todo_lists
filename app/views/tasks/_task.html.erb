@@ -1,18 +1,11 @@
-<div id="<%= dom_id task %>">
 
-  <p>
-    <strong>Name:</strong>
-    <%= task.name %>
-  </p>
-
-  <p>
-    <strong>Description:</strong>
-    <%= task.description %>
-  </p>
-
-  <p>
-    <strong>Priority:</strong>
-    <%= task.priority %>
-  </p>
-
-</div>
+  <tbody class="table-group-divider">
+    <tr>
+      <th scope="row"><%=task.id%></th>
+      <td><%=task.name%></td>
+      <td><%=task.description%></td>
+      <td><%=task.priority%></td>
+      <td><%= link_to "Show this task", task %></td>
+    </tr> 
+   
+  </tbody>
