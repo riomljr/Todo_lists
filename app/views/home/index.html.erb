@@ -1,3 +1,11 @@
-<h1>Welcome To Your ToDo List!</h1>
 
-<%= link_to "Show me my Tasks", tasks_path, class: "btn btn-dark" %>
+<%if user_signed_in? %>
+  <h1>Welcome To Your ToDo List, <%= current_user.email%>!</h1>
+  <%= link_to "Show me my Tasks", tasks_path, class: "btn btn-dark" %>
+<%else%>
+  <h1>Please Sign In or Sign Up</h1>
+<%end%>
+
+
+
+

@@ -1,7 +1,17 @@
 class TasksController < ApplicationController
   before_action :set_task, only: %i[ show edit update destroy ]
   before_action :authenticate_user!
+  before_action :is_current_user?, only: %i[ show edit update destroy ]
 
+ 
+  def is_current_user?
+    @task = Task.find(params[:id])
+    @task_user = @task.user_id
+    if current_user.id != @task_user
+      redirect_to root_path
+    end
+  end
+ 
   # GET /tasks or /tasks.json
   def index
     @user = User.find(current_user.id)
@@ -10,6 +20,7 @@ class TasksController < ApplicationController
 
   # GET /tasks/1 or /tasks/1.json
   def show
+
   end
 
   # GET /tasks/new
