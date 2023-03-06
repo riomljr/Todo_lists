@@ -1,11 +1,12 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Creating a TodoList web app. Each user can set their own tasks. 
+
+Live Example available @ https://solitary-snow-4714.fly.dev/
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version 3.1.2
 
 * System dependencies
 
